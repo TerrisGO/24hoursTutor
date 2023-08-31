@@ -1,0 +1,239 @@
+<html>
+<head></head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<style>
+
+
+-
+
+
+/****** tab *********/
+.nav-tabs { border-bottom: 2px solid #DDD; }
+    .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; }
+    .nav-tabs > li > a { border: none; color: #666; }
+        .nav-tabs > li.active > a, .nav-tabs > li > a:hover { border: none; color: #4285F4 !important; background: transparent; }
+        .nav-tabs > li > a::after { content: ""; background: #4285F4; height: 2px; position: absolute; width: 100%; left: 0px; bottom: -1px; transition: all 250ms ease 0s; transform: scale(0); }
+    .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }
+.tab-nav > li > a::after { background: #21527d none repeat scroll 0% 0%; color: #fff; }
+.tab-pane { padding: 15px 0; }
+.tab-content{padding:20px}
+
+.card {background: #FFF none repeat scroll 0% 0%; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); margin-bottom: 30px; }
+body{ background: #EDECEC; padding:50px}
+/****** tab *********/
+
+</style>
+
+
+<!-- nav bar -->
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row">
+    <div class="col-sm-3">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large"><img src="https://serving.photos.photobox.com/2088597705d80b15a89bed1768135c6c829315ba3f9a2dbd68520e0d88fe0b4804ef04d9.jpg" style="width:120px; height:40px" title="24hrs Tutor" alt="24hrs Tutor"></a>
+        <ul class="nav nav-pills nav-stacked nav-email shadow mb-20">
+            <li class="active">
+                <a href="#mail-inbox.html">
+                    <i class="fa fa-inbox"></i> UserFirstLastName  <span class="label pull-right">7</span>
+                </a>
+            </li>
+            <li>
+                <a href="#mail-compose.html"><i class="fa fa-search"></i> Searching</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-sliders"></i>Set course</a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-file-text-o"></i> Drafts <span class="label label-info pull-right inbox-notification">35</span>
+                </a>
+            </li>
+            <li><a href="#"> <i class="fa fa-calendar-o"></i> Schedule</a></li>
+             <li>
+                <a href="#">
+                    <i class="fa fa-sign-out fa-1x"></i> Sign Out
+                </a>
+            </li>
+        </ul><!-- /.nav -->
+    </div>
+    <div class="col-sm-9">
+
+        <!--  statitics -->
+        <div class="row">
+            <div class="col-lg-3">
+            	<div class="panel panel-info">
+        			<div class="panel-heading">
+        				<div class="row">
+        					<div class="col-xs-6">
+        						<i class="fa fa-envelope-o fa-5x"></i>
+        					</div>
+        					<div class="col-xs-6 text-right">
+        						<p class="announcement-heading">1</p>
+        					<!--	<p class="announcement-text">Users</p> -->
+        					</div>
+        				</div>
+        			</div>
+        			<a href="#">
+        				<div class="panel-footer announcement-bottom">
+        					<div class="row">
+        						<div class="col-xs-6">
+        							Messages
+        						</div>
+        						<div class="col-xs-6 text-right">
+        							<i class="fa fa-arrow-circle-right"></i>
+        						</div>
+        					</div>
+        				</div>
+        			</a>
+        		</div>
+        	</div>
+        	<div class="col-lg-3">
+        		<div class="panel panel-warning">
+        			<div class="panel-heading">
+        				<div class="row">
+        					<div class="col-xs-6">
+        						<i class="fa fa-thumbs-up fa-5x"></i>
+        					</div>
+        					<div class="col-xs-6 text-right">
+        						<p class="announcement-heading">12</p>
+        						<!-- <p class="announcement-text"> Items</p> -->
+        					</div>
+        				</div>
+        			</div>
+        			<a href="#">
+        				<div class="panel-footer announcement-bottom">
+        					<div class="row">
+        						<div class="col-xs-6">
+        							Interests
+        						</div>
+        						<div class="col-xs-6 text-right">
+        							<i class="fa fa-arrow-circle-right"></i>
+        						</div>
+        					</div>
+        				</div>
+        			</a>
+        		</div>
+        	</div>
+        	<div class="col-lg-3">
+        		<div class="panel panel-danger">
+        			<div class="panel-heading">
+        				<div class="row">
+        					<div class="col-xs-6">
+        						<i class="fa fa-bell-o fa-5x"></i>
+        					</div>
+        					<div class="col-xs-6 text-right">
+        						<p class="announcement-heading">18</p>
+        						<p class="announcement-text">On the Go</p>
+        					</div>
+        				</div>
+        			</div>
+        			<a href="#">
+        				<div class="panel-footer announcement-bottom">
+        					<div class="row">
+        						<div class="col-xs-6">
+        							Requests
+        						</div>
+        						<div class="col-xs-6 text-right">
+        							<i class="fa fa-arrow-circle-right"></i>
+        						</div>
+        					</div>
+        				</div>
+        			</a>
+        		</div>
+        	</div>
+        	<div class="col-lg-3">
+        		<div class="panel panel-success">
+        			<div class="panel-heading">
+        				<div class="row">
+        					<div class="col-xs-6">
+        						<i class="fa fa-comments fa-5x"></i>
+        					</div>
+        					<div class="col-xs-6 text-right">
+        						<p class="announcement-heading">56</p>
+        						<p class="announcement-text"> Orders!</p>
+        					</div>
+        				</div>
+        			</div>
+        			<a href="#">
+        				<div class="panel-footer announcement-bottom">
+        					<div class="row">
+        						<div class="col-xs-6">
+        							Complete 
+        						</div>
+        						<div class="col-xs-6 text-right">
+        							<i class="fa fa-arrow-circle-right"></i>
+        						</div>
+        					</div>
+        				</div>
+        			</a>
+        		</div>
+        	</div>
+        </div><!-- /.row -->  
+        
+        <!-- tabs -->
+        <div class="card">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">My Info</a></li>
+                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+            </ul>
+    
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="home">
+                    <!--<h2 class="page-header">Search Results</h2>-->
+                    <section class="comment-list">
+                      <!-- First Comment -->
+                      <article class="row">
+                        <div class="col-md-2 col-sm-2 hidden-xs">
+                          <figure class="thumbnail">
+                            <img class="img-responsive" src="https://www.tutorhunt.com/profile-images/cropped-280-280/479938662052109035851.jpg" />
+                            <figcaption class="text-center">username</figcaption>
+                          </figure>
+                        </div>
+                        <div class="col-md-10 col-sm-10">
+                          <div class="panel panel-default arrow left">
+                            <div class="panel-body">
+                              <header class="text-left">
+                                <div class="comment-user"><i class="fa fa-user"></i> Account </div>
+                                <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> Dec 16, 2014</time>
+                              </header>
+                              <div class="comment-post">
+                               <form action ='login_success.php' method='POST'>
+Zip Code:<br>
+      <input type='text' name='zip' value='$res' maxlength='5'>
+      <br>
+Address:<br>
+      <input type='text' name='address' value='$res2'>
+<input name='submit' type='submit'  value='edit'> <hr>
+</form>
+                              </div>
+                              <p class="text-right"><a href="#" class="btn btn-default btn-sm"><i class="fa fa-reply"></i> reply</a></p>
+                            </div>
+                          </div>
+                        </div>
+                      </article>      
+                    </section>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="profile"><iframe src="profileview4.html" style="height:600px;width:600px"></iframe>                              <p class="text-right"><a href="profileview4.html" class="btn btn-default btn-sm"><i class="fa fa-reply"></i> view full page</a></p></div>
+                <div role="tabpanel" class="tab-pane" id="messages">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                <div role="tabpanel" class="tab-pane" id="settings">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passage..</div>
+            </div>
+        </div>
+        <!-- tabs -->
+        
+    </div>
+</div>
+
+</body>
+</html>

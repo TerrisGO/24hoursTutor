@@ -1,0 +1,203 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.pagination.center,
+.pagination.center ul {
+    float: left;
+    position: relative;
+}
+.pagination.center { left: 50%; }
+.pagination.center ul { left: -50%; }
+
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+.topnav .login-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width:120px;
+}
+
+.topnav .login-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background-color: #555;
+  color: white;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .login-container button:hover {
+  background-color: green;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .login-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .login-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-blue w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large"><img src="https://serving.photos.photobox.com/2088597705d80b15a89bed1768135c6c829315ba3f9a2dbd68520e0d88fe0b4804ef04d9.jpg" style="width:120px; height:40px" title="24hrs Tutor" alt="24hrs Tutor"></a>
+    <a href="register.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Register</a>
+    <a href="search.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Search</a>
+    <div class="topnav">
+    <div class="login-container w3-hide-small">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Username" name="username">
+      <input type="text" placeholder="Password" name="psw">
+      <button type="submit">Login</button>
+    </form>
+  </div></div>
+    </div>
+  </div>
+</div>
+<body background="http://literacyrochester.org/wp-content/uploads/2017/08/Depositphotos_6842439_original.jpg" style="background-size: cover";>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-3 col-md-6 col-md-offset-3 col-lg-offset-0">
+      <div class="well">
+      <h3 align="center">Search Filter</h3>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="location1" class="control-label">Location</label>
+            <select class="form-control" name="" id="location1">
+              <option value="">Any</option>
+              <option value="">1</option>
+              <option value="">2</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="type1" class="control-label">Type</label>
+            <select class="form-control" name="" id="type1">
+              <option value="">Any</option>
+              <option value="">1</option>
+              <option value="">2</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pricefrom" class="control-label">Min Price</label>
+            <div class="input-group">
+              <div class="input-group-addon" id="basic-addon1">$</div>
+              <input type="text" class="form-control" id="pricefrom" aria-describedby="basic-addon1">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="priceto" class="control-label">Max Price</label>
+            <div class="input-group">
+              <div class="input-group-addon" id="basic-addon2">$</div>
+              <input type="text" class="form-control" id="priceto" aria-describedby="basic-addon1">
+            </div>
+          </div>
+          <p class="text-center"><a href="#" class="btn btn-danger glyphicon glyphicon-search" role="button"></a></p>
+        </form>
+      </div>
+    </div>
+	</div>
+</div>
+<br><br>
+
+  <div class="col-md-20">
+            <div class="well well-sm">
+                <div class="media">
+                    <a class="thumbnail pull-left" href="#">
+                        <img class="media-object" src="https://media.indiatimes.in/media/content/itimes/photo/2016/Jun/10/1465543585-cute-pic_666x500.jpg" style="width:120px; height:80px">
+                    </a>
+                    <div class="media-body">
+                        <h3 class="media-heading">John Doe</h3>
+                		<p><span class="label label-info">10 Best Review</span> <span class="label label-primary">89 Students</span></p>
+                        <p>
+                            <a href="#" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-heart"></span> Favorite</a>
+                            <a href="profileview4.html" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-eye-open"></span> More Info</a>
+                            <h5>Loreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal Ipsum...</h5>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-20">
+            <div class="well well-sm">
+                <div class="media">
+                    <a class="thumbnail pull-left" href="#">
+                        <img class="media-object" src="https://media.indiatimes.in/media/content/itimes/photo/2016/Jun/10/1465543585-cute-pic_666x500.jpg" style="width:120px; height:80px">
+                    </a>
+                    <div class="media-body">
+                        <h3 class="media-heading">John Doe</h3>
+                		<p><span class="label label-info">10 Best Review</span> <span class="label label-primary">89 Students</span></p>
+                        <p>
+                            <a href="#" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-heart"></span> Favorite</a>
+                            <a href="profileview4.html" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-eye-open"></span> More Info</a>
+                            <h5>Loreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal Ipsum...</h5>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-20">
+            <div class="well well-sm">
+                <div class="media">
+                    <a class="thumbnail pull-left" href="#">
+                        <img class="media-object" src="https://media.indiatimes.in/media/content/itimes/photo/2016/Jun/10/1465543585-cute-pic_666x500.jpg" style="width:120px; height:80px">
+                    </a>
+                    <div class="media-body">
+                        <h3 class="media-heading">John Doe</h3>
+                		<p><span class="label label-info">10 Best Review</span> <span class="label label-primary">89 Students</span></p>
+                        <p>
+                            <a href="#" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-heart"></span> Favorite</a>
+                            <a href="profileview4.html" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-eye-open"></span> More Info</a>
+                            <h5>Loreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal IpsumLoreal Ipsum...</h5>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            
+<hr><br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+<nav aria-label="Page navigation example">
+  <ul class="pagination center">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</nav>
+</div></div></div>
+</body>
+</html>
+     

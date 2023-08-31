@@ -1,0 +1,19 @@
+username:
+
+24hourstutor
+
+
+ 
+
+password:
+
+uW48wJcNXejfev53
+
+
+ 
+
+dbname:
+
+24hourstutor
+new pass
+dontuse1timep@d

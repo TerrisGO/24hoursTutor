@@ -1,0 +1,116 @@
+<?php
+ require_once('db.php');
+ $get_all_table_query = "SHOW TABLES";
+ $statement = $conn->prepare($get_all_table_query);
+ $statement->execute();
+ $result = $statement->fetchAll();
+ 
+ if(isset($_POST['table']))
+ {
+  $output = '';
+  foreach($_POST["table"] as $table)
+  {
+   $show_table_query = "SHOW CREATE TABLE " . $table . "";
+   $statement = $conn->prepare($show_table_query);
+   $statement->execute();
+   $show_table_result = $statement->fetchAll();
+ 
+   foreach($show_table_result as $show_table_row)
+   {
+    $output .= "\n\n" . $show_table_row["Create Table"] . ";\n\n";
+   }
+   $select_query = "SELECT * FROM " . $table . "";
+   $statement = $conn->prepare($select_query);
+   $statement->execute();
+   $total_row = $statement->rowCount();
+ 
+   for($count=0; $count<$total_row; $count++)
+   {
+    $single_result = $statement->fetch(PDO::FETCH_ASSOC);
+    $table_column_array = array_keys($single_result);
+    $table_value_array = array_values($single_result);
+    $output .= "\nINSERT INTO $table (";
+    $output .= "" . implode(", ", $table_column_array) . ") VALUES (";
+    $output .= "'" . implode("','", $table_value_array) . "');\n";
+   }
+  }
+  $file_name = 'database_backup_on_' . date('Y-m-d-H-i-s') . '.sql';
+  $file_handle = fopen($file_name, 'w+');
+  fwrite($file_handle, $output);
+  fclose($file_handle);
+  header('Content-Description: File Transfer');
+  header('Content-Type: application/octet-stream');
+  header('Content-Disposition: attachment; filename=' . basename($file_name));
+  header('Content-Transfer-Encoding: binary');
+  header('Expires: 0');
+  header('Cache-Control: must-revalidate');
+     header('Pragma: public');
+     header('Content-Length: ' . filesize($file_name));
+     ob_clean();
+     flush();
+     readfile($file_name);
+     unlink($file_name);
+
+     $dir = dirname(__FILE__) . date('y-m-d') . '.sql';
+     echo "<h3>Backing up database to `<code>{$dir}</code>`</h3>";
+     exec("mysqldump --user={$username} --password={$password} --host={$servername} {$dbname} --result-file={$dir} 2>&1", $output);
+     var_dump($output);
+ }
+ 
+ ?>
+ <!DOCTYPE html>
+ <html>
+  <head>
+   <title>How to Take Backup of Mysql Database using PHP Code</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  </head>
+  <body>
+   <br />
+   <div class="container">
+    <div class="row">
+     <h2 align="center">How to Take Backup of Mysql Database using PHP Code</h2>
+     <br />
+     <form method="post" id="export_form">
+      <h3>Select Tables for Export</h3>
+     <?php
+     foreach($result as $table)
+     {
+         $d = 0; 
+     ?>
+      <div class="checkbox">
+       <label><input type="checkbox" class="checkbox_table" name="table[]" value="<?php echo $table["$d"]; ?>" /> <?php echo $table["$d"]; ?></label>
+      </div>
+     <?php
+     } $d = $d +1;
+     ?>
+      <div class="form-group">
+       <input type="submit" name="submit" id="submit" class="btn btn-info" value="Export" />
+      </div>
+     </form>
+    </div>
+   </div>
+  </body>
+ </html>
+ <script>
+ $(document).ready(function(){
+  $('#submit').click(function(){
+   var count = 0;
+   $('.checkbox_table').each(function(){
+    if($(this).is(':checked'))
+    {
+     count = count + 1;
+    }
+   });
+   if(count > 0)
+   {
+    $('#export_form').submit();
+   }
+   else
+   {
+    alert("Please Select Atleast one table for Export");
+    return false;
+   }
+  });
+ });
+ </script>
